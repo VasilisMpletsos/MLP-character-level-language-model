@@ -4,7 +4,7 @@ import torch
 from torch import Tensor
 
 
-def make_dataset(file: Path, context_window: int = 3) -> tuple[Tensor, Tensor]:
+def make_dataset(file: Path, context_window: int = 3) -> tuple[Tensor, Tensor, dict]:
     words = open(file, "r").read().split()
 
     chars = sorted(list(set("".join(words))))
@@ -27,4 +27,4 @@ def make_dataset(file: Path, context_window: int = 3) -> tuple[Tensor, Tensor]:
     X = torch.tensor(X)
     Y = torch.tensor(Y)
 
-    return X, Y
+    return X, Y, itos

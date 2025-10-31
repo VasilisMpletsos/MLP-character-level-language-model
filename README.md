@@ -13,3 +13,7 @@ This implementation follows Andrej Karpathy’s tutorial of `makemore` and the B
 from ground up.
 
 Andrej lecture provides a step by step walkthrough of implementing a character level language model using a Multi Layer Perceptron (MLP), inspired by Bengio et al. (2003). It starts with an introduction and a review of the foundational paper, then covers the process of building a training dataset suitable for character-level modeling.
+![Model Architecture](./assets/bengio_model_architecture.png)
+
+The below image is the embeddings projection that came out from C Layer after trained on the dataset.
+![Alphabet Embeddings](./assets/alphabet_embeddings.png)
