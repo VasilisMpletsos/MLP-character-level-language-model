@@ -1,4 +1,4 @@
-# MLP Character Level Language Model
+# MLP Character Level Language Models
 
 [![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=fff)](#)
 [![NumPy](https://img.shields.io/badge/NumPy-4DABCF?logo=numpy&logoColor=fff)](#)
