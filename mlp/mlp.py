@@ -24,10 +24,10 @@ class CharacterLevelMLP(nn.Module):
     def forward(self, x):
         embeddings = self.C[x]
         hidden_dim = embeddings.view((embeddings.shape[0], -1)) @ self.W1 + self.b1
-        hidden_dim = torch.tanh(hidden_dim)
         hidden_dim = self.batchnorm1(hidden_dim)
-        hidden_dim = hidden_dim @ self.W2 + self.b2
         hidden_dim = torch.tanh(hidden_dim)
+        hidden_dim = hidden_dim @ self.W2 + self.b2
         hidden_dim = self.batchnorm2(hidden_dim)
+        hidden_dim = torch.tanh(hidden_dim)
         logits = hidden_dim @ self.W3 + self.b3
         return logits
