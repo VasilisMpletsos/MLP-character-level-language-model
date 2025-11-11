@@ -15,5 +15,23 @@ from ground up.
 Andrej lecture provides a step by step walkthrough of implementing a character level language model using a Multi Layer Perceptron (MLP), inspired by Bengio et al. (2003). It starts with an introduction and a review of the foundational paper, then covers the process of building a training dataset suitable for character-level modeling.
 ![Model Architecture](./assets/bengio_model_architecture.png)
 
-The below image is the embeddings projection that came out from C Layer after trained on the dataset.
+The below image is the embeddings projection with 2 dimensions that came out from C Layer after trained on the dataset.
 ![Alphabet Embeddings](./assets/alphabet_embeddings.png)
+
+## Networks
+
+There are 3 implementations of the same network on this repo that you can observe in experiment notebook.
+
+- Raw Tensors Network
+- Custom Layers Network
+- Parameter Usage Network
+
+Experiment notebook `experiment.ipynb` contains step-by-step runs, training loops and visualizations for all three implementations.
+
+All three implementations showcase the same training response achieving best loss around at 2.5.
+
+![Raw Tensors](./assets/raw_tensors.png)
+![Custom Layers](./assets/custom_layers.png)
+![Parameter Usage](./assets/parameter_usage.png)
+
+You can see though that second network with custom layers is starting from a better point and that is due to better initialization of layers.
