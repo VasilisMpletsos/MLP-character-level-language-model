@@ -20,11 +20,11 @@ The below image is the embeddings projection with 2 dimensions that came out fro
 
 ## Networks
 
-There are 3 implementations of the same network on this repo that you can observe in experiment notebook.
+There are **3 implementations of the same network** on this repo that you can observe in experiment notebook.
 
-- Raw Tensors Network
-- Custom Layers Network
-- Parameter Usage Network
+- **Raw Tensors** Network
+- **Custom Layers** Network
+- **Parameter Usage** Network
 
 Experiment notebook `experiment.ipynb` contains step-by-step runs, training loops and visualizations for all three implementations.
 
@@ -35,3 +35,10 @@ All three implementations showcase the same training response achieving best los
 ![Parameter Usage](./assets/parameter_usage.png)
 
 You can see though that second network with custom layers is starting from a better point and that is due to better initialization of layers.
+
+## Custom backpropagation
+
+In the notebook `backprop_ninja.ipynb`, a step by step manual backpropagation was executed, **without relying on PyTorch's loss.backward()** method, to provide a deeper understanding of how gradients are computed and applied. The result of training are clearly showcasing optimization.
+
+![Custom Backprop Train](./assets/custom_without_backward.png)
+![Doge Meme](./assets/doge_meme.png)
