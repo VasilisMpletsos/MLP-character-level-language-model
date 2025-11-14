@@ -12,7 +12,6 @@ def make_dataset(file: Path, context_window: int = 3) -> tuple[Tensor, Tensor, d
     stoi["."] = 0
     itos = {i: s for s, i in stoi.items()}
 
-    context_window = 3
     X, Y = [], []
     for word in words:
         # print(word)

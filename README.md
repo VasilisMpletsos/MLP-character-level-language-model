@@ -10,10 +10,11 @@ Character level language model build with a simple Multi Layer Perceptron.
 ## 🚀 About This Project
 
 This implementation follows Andrej Karpathy’s tutorial of `makemore` and the Bengio et. al. paper `A Neural Probabilistic Language Model` ([Youtube Link](https://github.com/karpathy/makemore) , [Paper Link](https://www.jmlr.org/papers/volume3/bengio03a/bengio03a.pdf)) on building a character language model
-from ground up.
+from ground up as well as a similar approach like `WAVENET: A GENERATIVE MODEL FOR RAW AUDIO` ([Wavenet Link](https://arxiv.org/abs/1609.03499)) did for audio.
 
 Andrej lecture provides a step by step walkthrough of implementing a character level language model using a Multi Layer Perceptron (MLP), inspired by Bengio et al. (2003). It starts with an introduction and a review of the foundational paper, then covers the process of building a training dataset suitable for character-level modeling.
 ![Model Architecture](./assets/bengio_model_architecture.png)
+![WaveNet Architecture](./assets/wavenet_model.png)
 
 The below image is the embeddings projection with 2 dimensions that came out from C Layer after trained on the dataset.
 ![Alphabet Embeddings](./assets/alphabet_embeddings.png)
@@ -26,7 +27,7 @@ There are **3 implementations of the same network** on this repo that you can ob
 - **Custom Layers** Network
 - **Parameter Usage** Network
 
-Experiment notebook `experiment.ipynb` contains step-by-step runs, training loops and visualizations for all three implementations.
+Experiment notebook `three_model_approaches.ipynb` contains step-by-step runs, training loops and visualizations for all three implementations.
 
 All three implementations showcase the same training response achieving best loss around at 2.5.
 
@@ -35,6 +36,8 @@ All three implementations showcase the same training response achieving best los
 ![Parameter Usage](./assets/parameter_usage.png)
 
 You can see though that second network with custom layers is starting from a better point and that is due to better initialization of layers.
+
+Further more a WaveNet like network is being presented in `wavenet.ipynb`.
 
 ## Custom backpropagation
 
